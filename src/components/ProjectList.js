@@ -9,7 +9,8 @@ function ProjectList({projects}) {
       <h2>My Projects</h2>
       <div id="project-list">
         {projects.map(project=>{
-             return <ProjectItem key={project.id} {... project}/>;
+             // do this if passing one object only return <ProjectItem key={project.id} {... project}/>;
+             <ProjectItem key={project.name} project={project}/>
           })
           }
       </div>
